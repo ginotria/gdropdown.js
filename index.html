@@ -1,0 +1,165 @@
+<html>
+<head>
+    <title>gdropdown.js</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="gdropdown.js"></script>
+    <link rel="stylesheet" type="text/css" href="gdropdown.css" media="screen" />
+</head>
+<body>
+<section id="main"> 
+    <article> 
+        <h1 id="positionText">Incoming</h1> 
+        
+        <div>This is a dropdown menu attached to a link. 
+            
+            <a class="button dropdown" href="#">Dropdown Menu</a> 
+            <nav class="dropdown-menu" id="nav-dropdown-menu"> 
+                <ol class="menu-dropdown left"> 
+                    <li class="menu-dropdown-item"> 
+                        <input type="checkbox" class="menu-dropdown-checkbox" name="item-1" /> 
+                        <label class="menu-dropdown-label-name">Group 1</label> 
+                        <label class="menu-dropdown-label-counter">0</label> 
+                    </li> 
+                    <li class="menu-dropdown-item"> 
+                        <input type="checkbox" class="menu-dropdown-checkbox" name="item-2" /> 
+                        <label class="menu-dropdown-label-name">Group 2</label> 
+                        <label class="menu-dropdown-label-counter">2</label> 
+                    </li> 
+                    <li class="menu-dropdown-item"> 
+                        <input type="checkbox" class="menu-dropdown-checkbox" name="item-3" /> 
+                        <label class="menu-dropdown-label-name">Group 3</label> 
+                        <label class="menu-dropdown-label-counter">99</label> 
+                    </li> 
+                    <li class="menu-dropdown-item"> 
+                        <input type="checkbox" class="menu-dropdown-checkbox" name="item-4" /> 
+                        <label class="menu-dropdown-label-name">Group 4</label> 
+                        <label class="menu-dropdown-label-counter">99</label> 
+                    </li> 
+                    <li class="menu-dropdown-item"> 
+                        <input type="checkbox" class="menu-dropdown-checkbox" name="item-5" /> 
+                        <label class="menu-dropdown-label-name">Group 5</label> 
+                        <label class="menu-dropdown-label-counter">99</label> 
+                    </li> 
+                    <li class="menu-dropdown-item"> 
+                        <input type="checkbox" class="menu-dropdown-checkbox" name="item-6" /> 
+                        <label class="menu-dropdown-label-name">Group 6</label> 
+                        <label class="menu-dropdown-label-counter">99</label> 
+                    </li> 
+                    <li class="menu-dropdown-item"> 
+                        <input type="checkbox" class="menu-dropdown-checkbox" name="item-7" /> 
+                        <label class="menu-dropdown-label-name">Group 7</label> 
+                        <label class="menu-dropdown-label-counter">99</label> 
+                    </li> 
+                    <li class="menu-dropdown-item"> 
+                        <input type="checkbox" class="menu-dropdown-checkbox" name="item-8" /> 
+                        <label class="menu-dropdown-label-name">Group 8</label> 
+                        <label class="menu-dropdown-label-counter">99</label> 
+                    </li> 
+                    <li class="menu-dropdown-item"> 
+                        <input type="checkbox" class="menu-dropdown-checkbox" name="item-9" /> 
+                        <label class="menu-dropdown-label-name">Group 9</label> 
+                        <label class="menu-dropdown-label-counter">39</label> 
+                    </li> 
+                </ol> 
+                <footer> 
+                    <a href="#" class="menu-button">Create New</a> 
+                </footer> 
+            </nav> 
+            
+        </div> 
+        
+        <div>This is a popup tooltip attached to a link. 
+            
+            <a class="button poptip" href="#">More info</a> 
+            <nav class="poptip-menu"> 
+                <div class="poptip-menu-content"> 
+                    <p>Some pretty content goes in here, no matter how big, but should not be long.</p> 
+                    <p>Attach a click event to the document which closes the window. Attaching it to the body only attaches 
+                        an event to how far the page flows vertically. I used Eran's solution originally but it didn't work for 
+                        me since my page was very short vertically. Attach a separate click event to the window which stops 
+                        propagation to the document itself.</p> 
+                </div> 
+                <footer class="poptip-menu-footer"> 
+                    <button class="poptip-menu-button">Cool!</button> 
+                </footer> 
+                <div class="popit-menu-triangle"> 
+                    <div class="border-up"></div> 
+                    <div class="fill-up"></div> 
+                </div> 
+            </nav> 
+            
+        </div> 
+        
+        <div>This is a popup tooltip attached to a link, but it has a title and a close button. 
+            
+            <a class="button poptip" href="#">Limited</a> 
+            <nav class="poptip-menu closeable"> 
+                <button class="poptip-menu-button close"><span>x</span></button> 
+                <header class="poptip-menu-header"> 
+                    <label class="poptip-menu-header-label">Title of this tip goes here.</label> 
+                </header> 
+                <div class="poptip-menu-content"> 
+                    <p>Online other poptip, this one will maintain it's state until closed by close button in the corner.</p> 
+                    <p>Attach a click event to the document which closes the window. Attaching it to the body only attaches 
+                        an event to how far the page flows vertically. I used Eran's solution originally but it didn't work for 
+                        me since my page was very short vertically. Attach a separate click event to the window which stops 
+                        propagation to the document itself.</p> 
+                </div> 
+                <footer class="poptip-menu-footer"> 
+                    <a href="#" class="menu-button">Whaaaaat?</a> 
+                </footer> 
+                <div class="popit-menu-triangle"> 
+                    <div class="border-up"></div> 
+                    <div class="fill-up"></div> 
+                </div> 
+            </nav> 
+            
+        </div> 
+        
+        <div>This is a drop-down options menu. attached to a settings symbol or arrow icon. 
+            
+            <a class="button options" href="#">( ^ )</a> 
+            <nav class="options-menu"> 
+                <ol class="menu-options"> 
+                    <li class="menu-options-item"> 
+                        <label class="menu-options-label-name">Option 1</label> 
+                    </li> 
+                    <li class="menu-options-item"> 
+                        <label class="menu-options-label-name">Option 2</label> 
+                    </li> 
+                    <li class="menu-options-item"> 
+                        <label class="menu-options-label-name">Option 3</label> 
+                    </li> 
+                </ol> 
+            </nav> 
+            
+        </div> 
+
+        <div>This is a drop-down options menu. attached to a settings symbol or arrow icon. 
+            
+            <a class="button options" href="#">( ^ )</a> 
+            <nav class="options-menu"> 
+                <ol class="menu-options"> 
+                    <li class="menu-options-item"> 
+                        <label class="menu-options-label-name">Option 1</label> 
+                    </li> 
+                    <li class="menu-options-item"> 
+                        <label class="menu-options-label-name">Option 2</label> 
+                    </li> 
+                    <li class="menu-options-item"> 
+                        <label class="menu-options-label-name">Option 3</label> 
+                    </li> 
+                </ol> 
+            </nav> 
+            
+        </div> 
+        
+    </article> 
+</section> 
+
+<script type="text/javascript">
+    $('.button').gdropdown();
+</script>
+
+</body>
+</html>

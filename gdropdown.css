@@ -1,0 +1,232 @@
+nav ol {
+  -webkit-padding-start: 0;
+  -webkit-margin-before: 0.3em;  
+  -webkit-margin-after: 0.3em;  
+}
+/* line 25, ../sass/menu.scss */
+nav.dropdown-menu {
+    display: none;
+    background: white;
+    border: 1px solid #AAA;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    cursor: default;
+    font: normal 13px arial,sans-serif;
+    outline: none;
+    overflow: hidden;
+    position: absolute;
+    z-index: 99;
+    width: 200px;
+}
+/* line 39, ../sass/menu.scss */
+nav.dropdown-menu.active {
+    display: block !important;
+}
+/* line 42, ../sass/menu.scss */
+nav.dropdown-menu .menu-dropdown {
+    padding: 0;
+    margin: 0.3em 0;
+    max-height: 160px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+/* line 48, ../sass/menu.scss */
+nav.dropdown-menu .menu-dropdown::-webkit-scrollbar {
+    background: transparent;
+    overflow: visible;
+    width: 15px;
+}
+/* line 53, ../sass/menu.scss */
+nav.dropdown-menu .menu-dropdown::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: solid white;
+}
+/* line 57, ../sass/menu.scss */
+nav.dropdown-menu .menu-dropdown .menu-dropdown-item {
+    -moz-user-select: none;
+    -o-text-overflow: ellipsis;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+    line-height: normal;
+    overflow: hidden;
+    padding: 2px 0 3px 6px;
+    text-overflow: ellipsis;
+    user-select: none;
+    white-space: nowrap;
+}
+/* line 69, ../sass/menu.scss */
+nav.dropdown-menu .menu-dropdown .menu-dropdown-item .menu-dropdown-checkbox {
+    vertical-align: middle;
+}
+/* line 72, ../sass/menu.scss */
+nav.dropdown-menu .menu-dropdown .menu-dropdown-item .menu-dropdown-label-name {
+    vertical-align: middle;
+    cursor: pointer;
+}
+/* line 76, ../sass/menu.scss */
+nav.dropdown-menu .menu-dropdown .menu-dropdown-item .menu-dropdown-label-counter {
+    float: right;
+    display: inline-block;
+    padding: 0 0.6em;
+    vertical-align: middle;
+}
+/* line 84, ../sass/menu.scss */
+nav.dropdown-menu footer {
+    padding: 0.6em;
+    border-top: 1px solid #AAA;
+}
+
+/* line 91, ../sass/menu.scss */
+nav.poptip-menu {
+    display: none;
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    background-color: white;
+    border: 1px solid #CCC;
+    padding: 13px 6px 9px 13px;
+    position: absolute;
+    z-index: 99;
+    font: normal 13px arial,sans-serif;
+    width: 222px;
+}
+/* line 107, ../sass/menu.scss */
+nav.poptip-menu.active {
+    display: block !important;
+}
+/* line 110, ../sass/menu.scss */
+nav.poptip-menu.closeable {
+    min-width: 369px;
+    max-width: 420px;
+    background-color: white;
+    padding-right: 30px;
+}
+/* line 115, ../sass/menu.scss */
+nav.poptip-menu.closeable .poptip-menu-button.close {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 3px;
+    text-align: center;
+}
+/* line 123, ../sass/menu.scss */
+nav.poptip-menu.closeable .poptip-menu-header {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+/* line 127, ../sass/menu.scss */
+nav.poptip-menu.closeable .poptip-menu-content {
+    margin-bottom: 10px;
+}
+/* line 131, ../sass/menu.scss */
+nav.poptip-menu .poptip-menu-content {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 160px;
+    margin-bottom: 0.6em;
+}
+/* line 136, ../sass/menu.scss */
+nav.poptip-menu .poptip-menu-content::-webkit-scrollbar {
+    background: transparent;
+    overflow: visible;
+    width: 15px;
+}
+/* line 141, ../sass/menu.scss */
+nav.poptip-menu .poptip-menu-content::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: solid white;
+}
+/* line 145, ../sass/menu.scss */
+nav.poptip-menu .poptip-menu-content p {
+    display: block;
+    margin-bottom: 10px;
+}
+/* line 150, ../sass/menu.scss */
+nav.poptip-menu .popit-menu-triangle {
+    position: absolute;
+    top: -9px;
+    left: 20px;
+}
+/* line 154, ../sass/menu.scss */
+nav.poptip-menu .popit-menu-triangle .border-up {
+    border-color: #AAA transparent;
+    left: -9px;
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0;
+    border-width: 9px;
+    border-style: solid;
+    border-top-width: 0;
+}
+/* line 165, ../sass/menu.scss */
+nav.poptip-menu .popit-menu-triangle .fill-up {
+    top: 1px;
+    border-color: white transparent;
+    left: -8px;
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0;
+    border-width: 8px;
+    border-style: solid;
+    border-top-width: 0;
+}
+
+/* line 181, ../sass/menu.scss */
+nav.options-menu {
+    display: none;
+    background: white;
+    border: 1px solid #CCC;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: default;
+    margin: 0;
+    min-width: 100px;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    -moz-transition: opacity .218s;
+    -o-transition: opacity .218s;
+    -webkit-transition: opacity .218s;
+    transition: opacity .218s;
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font: normal 13px arial,sans-serif;
+    width: 200px;
+    z-index: 99;
+}
+/* line 201, ../sass/menu.scss */
+nav.options-menu.active {
+    display: block !important;
+}
+/* line 204, ../sass/menu.scss */
+nav.options-menu .menu-options-item {
+    color: #666;
+    cursor: pointer;
+    list-style: none;
+    margin: 0;
+    /*padding: 6px 7em 6px 22px;*/
+    padding: 3px 0 4px 15px;
+    white-space: nowrap;
+}
+/* line 211, ../sass/menu.scss */
+nav.options-menu .menu-options-item .menu-options-label-name {
+    color: #666;
+    cursor: pointer;
+    list-style: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* line 219, ../sass/menu.scss */
+nav.options-menu .menu-options-item:hover {
+    background: #eee;
+}   
