@@ -6,10 +6,11 @@
             return this.each(function() {
                 var settings = {
                     position: 'bottom right',
+                    offset: {x:0, y:0},
                     contentClassName: '',
                     show: function() {},
                     hide: function() {},
-                    width: '222'
+                    width: '100'
                 };
   
                 if(options) {
@@ -35,10 +36,15 @@
                         plugin.content = $plugin.next('nav.options-menu').clone();
                     }
                     if (plugin.content) {
+                        settings.width = options.width || settings.width;
                         plugin.content.appendTo($('body'));
                     }
                 }
-                plugin.content.addClass('gdropdown ' + settings.contentClassName);
+                $plugin.addClass('gdd-parent');
+                var curr_id = (new Date()).getTime() + Math.floor(Math.random() * 20339481);
+                $plugin.attr('data-gdd-id', curr_id);
+                plugin.content.attr('id', curr_id);
+
                 plugin.position = function() {
                     var elementHeight = $plugin.height();
                     var elementPosition = $plugin.offset();
@@ -56,8 +62,8 @@
                         top = elementPosition.top - plugin.content.outerHeight();
                     }
                     plugin.content.css({
-                        'top': top,
-                        'left': left,
+                        'top': top + settings.offset.y,
+                        'left': left + settings.offset.x,
                         'width': settings.width + 'px'
                     });
 
@@ -76,9 +82,14 @@
                     $plugin.settings.hide();
                 };
 
+                plugin.remove = function() {
+                    console.log('removing ' + plugin.content.attr('id'));
+                    plugin.content.remove();
+                };
+
                 $plugin.unbind('click').click(function(e) {
                     e.preventDefault();
-                    $plugin.toggleClass('gddm-open')
+                    $plugin.toggleClass('gddm-open');
                     if($plugin.hasClass('gddm-open')) {
                         plugin.show();
                     } else {
@@ -100,7 +111,12 @@
         hide: function() {
             return this.each(function() {
                 this.hide();
-            });   
+            });
+        },
+        remove: function() {
+            return this.each(function() {
+                this.remove();
+            });
         }
 
     };
@@ -117,4 +133,20 @@
         }
     };
     
+    if (!window.gdd_observer) {
+        window.gdd_observer = new MutationSummary({
+            callback: function(summary) {
+                var gdd_elements = summary[0];
+                for (var i = 0; i < gdd_elements.removed.length; i++) {
+                    var t = $(gdd_elements.removed[i]);
+                    var id_to_remove = '#' + t.attr('data-gdd-id');
+                    console.log('removing ' + id_to_remove);
+                    $(id_to_remove).remove();
+                }
+
+            },
+            queries: [{ attribute: 'data-gdd-id' }]
+        });
+
+    }
 })(jQuery);
